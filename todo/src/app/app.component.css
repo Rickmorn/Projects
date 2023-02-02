@@ -1,0 +1,23 @@
+.navbar {
+    align-items: baseline;
+}
+
+.homeIcon {
+    height: 50px;
+    filter: invert(100%)
+    
+    
+}
+
+:hover.homeIcon {
+    cursor: pointer;
+}
+
+.navbar_button {
+
+    height: 50px
+}
+
+.homeTitle {
+    
+}

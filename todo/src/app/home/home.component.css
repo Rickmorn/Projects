@@ -1,0 +1,34 @@
+.pick{
+    height: 250px;
+}
+
+.img {
+    width: 200px;
+
+}
+
+.array {
+    border: 2px solid rgb(73, 73, 73);
+    padding: 20px;
+    width: 300px;
+    border-radius: 20px;
+
+
+}
+
+.trim{
+    width: 335px;
+    display: flex;
+}
+
+.btRight{
+    right: 200px;
+}
+
+.mybtn{
+    border-radius: 50px;
+}
+
+
+
+

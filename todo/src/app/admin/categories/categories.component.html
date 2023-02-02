@@ -1,0 +1,39 @@
+<br>
+<div class="container text-left">
+<form (ngSubmit)="onSubmit(form)" #form="ngForm">
+    
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Category id</span>
+        <input ngModel name="id" type="number" class="form-control" aria-describedby="basic-addon1">
+    </div>
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Category name</span>
+        <input ngModel name="name" type="text" class="form-control" aria-describedby="basic-addon1">
+    </div>
+    
+    <div class="d-grid gap-2">
+        <button class="btn btn-secondary">Input category</button>
+    </div>
+    <br>
+</form>
+</div>
+
+
+
+
+    <table class="table container">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col" class="text-center">Category</th>
+            <th scope="col" class="text-end">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let category of categories">
+            <th scope="row">{{ category.id }}</th>
+            <td class="text-center">{{ category.name }}</td>
+            <td class="text-end"><button (click)="deleteCategory(category)" class="btn btn-secondary">X</button></td>
+          </tr>
+        </tbody>
+      </table>

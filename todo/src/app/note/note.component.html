@@ -1,0 +1,19 @@
+<br>
+<div class="container text-left">
+    <div *ngIf="noteFound !== undefined" class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h4>{{noteFound.header}}</h4>
+            
+            <div class="mid">Category: {{noteFound.category}}</div>     
+            
+            <p class="mid">Priority: {{noteFound.priority}}</p>
+
+            <div class="contentH">Content:</div>
+            <p class="content">{{noteFound.content}}</p>
+
+
+            <div class="small muted last">ID: {{noteFound.id}}</div>
+            <div class="small muted last">Date of creation: {{noteFound.noteDate | date:"dd.mm.yy"}}</div>
+        </div>
+    </div>
+</div>

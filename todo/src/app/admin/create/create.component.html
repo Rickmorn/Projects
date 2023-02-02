@@ -1,0 +1,50 @@
+<br>
+<div class="container text-left">
+    <form (ngSubmit)="addNote(addNoteForm)" #addNoteForm="ngForm">
+
+        <!-- How to add automatic counting ID????? -->
+        <!-- <label>ID</label><br>
+        <input ngModel type="number" name="id"><br> -->
+
+
+        <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupSelect01">  Set Priority</label><br>
+            <select ngModel name="priority" class="form-select" id="inputGroupSelect01">
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option> 
+            </select><br>
+        </div>
+
+        <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupSelect01"> Select Category</label><br>
+            <select ngModel name="category" class="form-select" id="inputGroupSelect01" required>
+                <option hidden>Pick category</option>
+                <option *ngFor="let category of categories">{{ category.name }}</option>                
+            </select><br>
+        </div>
+
+   
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Header</span>
+            <input ngModel name="header" type="text" class="form-control" aria-describedby="basic-addon1">
+        </div>
+
+
+        <div class="input-group">
+            <span class="input-group-text">Contents</span>
+            <textarea ngModel name="content" class="form-control"></textarea>
+        </div>
+        <br>
+              
+        <label>Active</label> <br>
+        <input ngModel name="active" class="form-check-input mt-0" type="checkbox" checked> <br>
+        <br>
+        
+        
+        <div class="d-grid gap-2">
+            <button [disabled]="addNoteForm.invalid" class="btn btn-secondary">Create</button>
+        </div>
+
+    </form>
+</div>

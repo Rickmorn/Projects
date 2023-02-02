@@ -1,0 +1,39 @@
+<br>
+<div class="container text-left">
+    <form *ngIf="editNoteForm !== undefined" (ngSubmit)="updateNote()" [formGroup]="editNoteForm">
+        <!-- <label>ID</label> <br>
+        <input formControlName="id" type="number" (keyup)="checkIdUniqueness()"> <br> -->
+        <div class="input-group mb-3">
+            <label class="input-group-text">Priority</label> 
+            <input class="form-control" formControlName="priority" type="text"> 
+        </div>
+
+        <div class="input-group mb-3">
+            <label class="input-group-text">Date created</label> <br>
+            <input class="form-select" formControlName="noteDate" type="string"> <br>
+        </div>
+        
+        <div class="input-group mb-3"> 
+            <label class="input-group-text">Category</label>
+            <select class="form-select" formControlName="category" type="text">
+            <option *ngFor="let category of categories">{{ category.name }}</option>
+            </select>
+        </div>
+
+        <div class="input-group mb-3">
+            <label class="input-group-text">Header</label> <br>
+            <input class="form-select" formControlName="header" type="text"> <br>
+        </div>
+
+        <div class="input-group">
+            <label class="input-group-text">Content</label> <br>
+            <textarea class="form-select" formControlName="content" type="text" cols="30" rows="10"></textarea> <br> <br>
+        </div>
+        
+        <br>
+
+        <div class="d-grid gap-2">
+            <button class="btn btn-secondary" [disabled]="idUnique === false || editNoteForm.invalid">Change</button>
+        </div>
+    </form>
+</div>
